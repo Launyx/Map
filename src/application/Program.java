@@ -12,9 +12,22 @@ public class Program {
         //Put insere elemento no map
         cookies.put("username", "Maria");
         cookies.put("email", "maria@gmail.com");
-        cookies.put("phone", "99711122");
+        cookies.put("phone", "9971122");
 
         cookies.remove("email");
+        // Devido ao Map não aceitar repetições de chave, a linha abaixo vai substituir o elemento existente que tem "phone" como sua chave
+        cookies.put("phone", "99771133");
+
+        // Verifica se o Map contêm a chave "phone"
+        System.out.println("Contains 'phone' key: " + cookies.containsKey("phone"));
+
+        // Obtêm o valor da chave "phone"
+        System.out.println("Phone number: " + cookies.get("phone"));
+
+        // Quando não há o elemento no map ele retorna nulo
+        System.out.println("Email: " + cookies.get("email"));
+
+        System.out.println("Size: " + cookies.size());
 
         System.out.println("ALL COOKIES: ");
 
